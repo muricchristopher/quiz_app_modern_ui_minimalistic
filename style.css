@@ -1,0 +1,285 @@
+body{
+	overflow-y: hidden;
+	background-color: #f0f0f0;
+	padding: 3em;
+	max-width: 900px;
+	margin: auto;
+}
+
+.container{
+	height: 568px;
+	background-color: #fdfdfd;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+	align-items: center;
+	padding-bottom:45px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.references{
+	font-size:0.5rem;
+	position: relative;
+	top: 0;
+	bottom: 0px;
+	opacity: 0.6;
+}
+
+
+.active{
+	height: 100vh;
+	background-color: rgb(214, 192, 192);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4rem;
+	transition: 1s;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.question-counter{
+	width: 100%;
+	display: flex;
+	margin-bottom: 15px;
+	flex-wrap: wrap;
+}
+
+.question-counter-number{
+	background-color: #D4D7FF;
+	padding: 0px 20px;
+	text-align: center;
+	flex-grow: 1;
+}
+
+.question-active {
+	background-color: #525DFF;
+	color: white;
+}
+
+label{
+	cursor: pointer;
+}
+
+
+
+
+.quiz-all-options{
+	margin: 0;
+	padding: 0;
+	width: 80%;
+}
+
+.question-option{
+	margin: 0;
+	padding: 0;
+	background-color: #ECEFF4;
+	list-style: none;
+	cursor: pointer;
+	margin-bottom: 10px;
+	padding: 20px 15px;
+}
+
+.not-selected{
+	transition: 0.5s;
+	opacity: 0.5;
+}
+
+
+
+
+
+.quiz-all-options li:hover, .quiz-all-options .option-selected, .button-start{
+	background-color: #5E67E7;
+	color: white;
+	box-shadow: rgba(31, 31, 196, 0.25) 0px 13px 27px -5px, rgba(0, 4, 255, 0.3) 0px 8px 16px -8px;
+}
+
+
+#question-title{
+	width: 80%;
+	text-align: center;
+}
+
+input{
+	display: none;
+}
+
+.answr0{
+	background-color: rgba(187, 0, 0, 0.699);
+	color: white;
+	transition: .3s;
+}
+
+.answr1{
+	background-color: rgb(47, 199, 47, 0.699);
+	color: white;
+	transition: .3s;
+
+}
+
+.noHover{
+    pointer-events: none;
+}
+
+.game-percent-container{
+	background-color: #D4D7FF;
+	display: flex;
+	width: 100%;
+	margin-bottom: 15px;
+	flex-wrap: nowrap;
+}
+
+.game-percent{
+	padding: 0px 20px;
+	text-align: center;
+	flex-grow: 0;
+	transition: 0.5s;
+}
+
+@keyframes myMove{
+
+	from {width: 0%;}
+
+}
+
+#game-title{
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+#game-message{
+	text-align:center;
+	color: #696969;
+	font-size: 1.1rem;
+}
+
+.icon img{
+	width: 60px;
+
+}
+
+.game-info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 500px;
+}
+
+
+.game-over-container{
+	display: flex;
+	justify-content: center;
+	transition: .4s;
+}
+
+.game-over-container .question-counter{
+	position: relative;
+	top: -33px;
+}
+
+.main-img{
+
+	background-image: url('bg-wallpaper.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 200px;
+}
+
+.button-start{
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+	color: white;
+	padding: 20px 60px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.button-start:active{
+	transform: scale(.96)
+
+}
+
+.button-start:hover{
+	background-color: #5e67e7d8;
+}
+
+
+#load{
+    width: 80px;
+    height: 80px;
+    border: 10px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    margin: 0 auto;
+    color: #5E67E7;
+    animation: load 1s infinite linear;
+}
+
+@keyframes load {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loading-container{
+	justify-content: center;
+	padding: 0;
+	transition: .5s;
+
+}
+
+.hidded{
+	background: transparent;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		height: 100vh;
+		padding: 1em;
+	}
+	.container{
+		height: 95vh;
+	}
+
+	.container .main-img{
+
+	background-image: url('bg-wallpaper.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+	}
+
+	.container .game-info{
+		max-width: 280px;
+	}
+
+	.game-over-container .question-counter{
+		position: relative;
+		top: -63px;
+	}
+
+
+.hidded{
+	background: transparent;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	margin: 0;
+	padding: 0;
+}
+
+  }
